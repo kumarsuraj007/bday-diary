@@ -1,26 +1,225 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
+@layer base {
   :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+    --font-hand: "Patrick Hand", "Gaegu", cursive, sans-serif;
+    --font-gaegu: "Gaegu", cursive, sans-serif;
+    --font-sans: "Plus Jakarta Sans", system-ui, sans-serif;
+    --font-serif: "Cormorant Garamond", Georgia, serif;
+
+    /* Clean Journal & Desk Palette */
+    --desk-base: #F5F2EB;
+    --paper-clean: #FCFBF7;
+    --paper-line: rgba(190, 205, 220, 0.16);
+    --paper-margin: rgba(235, 160, 160, 0.18);
+
+    --ink-black: #1A1A1A;
+    --ink-charcoal: #2D2A28;
+    --ink-pencil: #5C5854;
+    --ink-faint: #8E8A85;
+
+    --tape-beige: rgba(245, 238, 224, 0.82);
+    --tape-blue: rgba(195, 222, 235, 0.85);
+    --tape-pink: rgba(248, 212, 216, 0.85);
+
+    --tag-kraft: #D4BEA0;
+    --ticket-red: #D9463E;
+    --butterfly-blue: #1D6FD2;
+  }
+
+  body {
+    background-color: var(--desk-base);
+    color: var(--ink-black);
+    font-family: var(--font-hand);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
   }
 }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+/* Custom Font Utilities */
+.font-hand {
+  font-family: var(--font-hand);
+}
+
+.font-gaegu {
+  font-family: var(--font-gaegu);
+}
+
+.font-sans {
+  font-family: var(--font-sans);
+}
+
+.font-serif {
+  font-family: var(--font-serif);
+}
+
+/* Realistic Lined Notebook Paper (Exactly as in Reference Images 1 & 2) */
+.lined-notebook-paper {
+  background-color: var(--paper-clean);
+  background-image:
+    repeating-linear-gradient(
+      to bottom,
+      transparent,
+      transparent 31px,
+      var(--paper-line) 31px,
+      var(--paper-line) 32px
+    );
+  background-attachment: local;
+}
+
+/* Light Ruled Lines with Margin Line */
+.lined-notebook-with-margin {
+  background-color: var(--paper-clean);
+  background-image:
+    linear-gradient(to right, transparent 48px, var(--paper-margin) 48px, var(--paper-margin) 49px, transparent 50px),
+    repeating-linear-gradient(
+      to bottom,
+      transparent,
+      transparent 31px,
+      var(--paper-line) 31px,
+      var(--paper-line) 32px
+    );
+  background-attachment: local;
+}
+
+/* Delicate Grid Paper */
+.grid-notebook-paper {
+  background-color: var(--paper-clean);
+  background-size: 24px 24px;
+  background-image:
+    linear-gradient(to right, rgba(185, 200, 215, 0.25) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(185, 200, 215, 0.25) 1px, transparent 1px);
+}
+
+/* Realistic 3D Book & Perspective */
+.perspective-stage {
+  perspective: 2500px;
+  perspective-origin: 50% 50%;
+}
+
+.preserve-3d {
+  transform-style: preserve-3d;
+}
+
+.backface-hidden {
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+}
+
+.rotate-y-180 {
+  transform: rotateY(180deg);
+}
+
+/* Center Spine Valley Shadows for Open Notebook */
+.spine-shadow-left {
+  background: linear-gradient(
+    to right,
+    rgba(255, 255, 255, 0.1) 0%,
+    rgba(0, 0, 0, 0) 72%,
+    rgba(0, 0, 0, 0.05) 88%,
+    rgba(0, 0, 0, 0.18) 100%
+  );
+}
+
+.spine-shadow-right {
+  background: linear-gradient(
+    to left,
+    rgba(255, 255, 255, 0.1) 0%,
+    rgba(0, 0, 0, 0) 72%,
+    rgba(0, 0, 0, 0.05) 88%,
+    rgba(0, 0, 0, 0.18) 100%
+  );
+}
+
+/* Real Page Stack Edges */
+.book-edge-stack-left {
+  box-shadow:
+    -1px 0 0 #D5CDBD,
+    -2px 0 0 #CAC1AF,
+    -3px 0 0 #BFB6A4,
+    -4px 1px 0 #B3A996,
+    -6px 3px 6px rgba(0, 0, 0, 0.12),
+    -16px 14px 28px rgba(0, 0, 0, 0.18);
+}
+
+.book-edge-stack-right {
+  box-shadow:
+    1px 0 0 #D5CDBD,
+    2px 0 0 #CAC1AF,
+    3px 0 0 #BFB6A4,
+    4px 1px 0 #B3A996,
+    6px 3px 6px rgba(0, 0, 0, 0.12),
+    16px 14px 28px rgba(0, 0, 0, 0.18);
+}
+
+/* Natural Window Daylight Ambient Lighting */
+.daylight-desk-ambient {
+  background: radial-gradient(
+    circle at 35% 25%,
+    rgba(255, 255, 255, 0.75) 0%,
+    rgba(245, 242, 235, 0.85) 50%,
+    rgba(235, 230, 220, 0.95) 100%
+  );
+}
+
+/* Soft Diagonal Window Shadow Across Table */
+.window-sunbeam-shadow {
+  background: linear-gradient(
+    125deg,
+    rgba(255, 255, 255, 0.35) 0%,
+    rgba(255, 255, 255, 0.15) 30%,
+    rgba(0, 0, 0, 0.02) 55%,
+    rgba(0, 0, 0, 0.06) 100%
+  );
+}
+
+/* Washi Tape Strip */
+.washi-tape-beige {
+  background-color: var(--tape-beige);
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.08);
+  backdrop-filter: blur(1px);
+}
+
+.washi-tape-blue {
+  background-color: var(--tape-blue);
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.08);
+  backdrop-filter: blur(1px);
+}
+
+/* 35mm Film Strip */
+.film-strip-border {
+  background: #111111;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.35);
+}
+
+/* Smooth Scroll Container */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Clean Minimal Scrollbar */
+::-webkit-scrollbar {
+  width: 5px;
+  height: 5px;
+}
+
+::-webkit-scrollbar-track {
+  background: #F0ECE3;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #C9C2B5;
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #AFA698;
+}
+
+.scrollbar-none::-webkit-scrollbar {
+  display: none;
+}
+.scrollbar-none {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
 }
