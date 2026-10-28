@@ -13,6 +13,7 @@ interface BookPageProps {
   spreadNumber: number;
   totalSpreads: number;
   rotationDeg?: number;
+  isSinglePage?: boolean;
 }
 
 export const BookPage: React.FC<BookPageProps> = ({
@@ -20,6 +21,7 @@ export const BookPage: React.FC<BookPageProps> = ({
   pageData,
   spreadNumber,
   rotationDeg = 0,
+  isSinglePage = false,
 }) => {
   const isLeft = side === 'left';
   const isCover = pageData.isCoverPage || pageData.image?.style === 'cover-full';
@@ -29,7 +31,11 @@ export const BookPage: React.FC<BookPageProps> = ({
     return (
       <div
         className={`relative w-full h-full overflow-hidden select-none bg-[#EFE8DC] transition-colors duration-200 ${
-          isLeft ? 'border-r border-[#D9D3C7]' : 'border-l border-[#D9D3C7]'
+          isSinglePage
+            ? 'rounded-2xl border border-[#D9D3C7]'
+            : isLeft
+            ? 'border-r border-[#D9D3C7]'
+            : 'border-l border-[#D9D3C7]'
         }`}
       >
         {/* Cover Photo filling the entire page */}
@@ -44,7 +50,11 @@ export const BookPage: React.FC<BookPageProps> = ({
         {/* Spine crease shadow overlay */}
         <div
           className={`absolute inset-y-0 ${
-            isLeft ? 'right-0 w-12 spine-shadow-left' : 'left-0 w-12 spine-shadow-right'
+            isSinglePage
+              ? 'left-0 w-8 spine-shadow-right opacity-60'
+              : isLeft
+              ? 'right-0 w-12 spine-shadow-left'
+              : 'left-0 w-12 spine-shadow-right'
           } pointer-events-none z-20`}
         />
 
@@ -61,16 +71,24 @@ export const BookPage: React.FC<BookPageProps> = ({
 
   return (
     <div
-      className={`relative w-full h-full lined-notebook-paper overflow-hidden flex flex-col justify-between p-3.5 sm:p-4 md:p-5 select-text transition-colors duration-200 ${
-        isLeft
-          ? 'border-r border-[#D9D3C7]'
-          : 'border-l border-[#D9D3C7]'
+      className={`relative w-full h-full lined-notebook-paper overflow-hidden flex flex-col justify-between ${
+        isSinglePage ? 'p-4 sm:p-5 md:p-6 rounded-2xl shadow-lg border border-[#D9D3C7]/90' : 'p-3.5 sm:p-4 md:p-5'
+      } select-text transition-colors duration-200 ${
+        !isSinglePage
+          ? isLeft
+            ? 'border-r border-[#D9D3C7]'
+            : 'border-l border-[#D9D3C7]'
+          : ''
       }`}
     >
-      {/* Spine crease shadow overlay: vertical between left and right pages */}
+      {/* Spine crease shadow overlay */}
       <div
         className={`absolute inset-y-0 ${
-          isLeft ? 'right-0 w-10 md:w-12 spine-shadow-left' : 'left-0 w-10 md:w-12 spine-shadow-right'
+          isSinglePage
+            ? 'left-0 w-8 spine-shadow-right opacity-60'
+            : isLeft
+            ? 'right-0 w-10 md:w-12 spine-shadow-left'
+            : 'left-0 w-10 md:w-12 spine-shadow-right'
         } pointer-events-none z-20`}
       />
 
@@ -97,48 +115,48 @@ export const BookPage: React.FC<BookPageProps> = ({
 
       {/* Top Header Section */}
       <header className="relative z-10 mb-1">
-        <div className="flex items-center justify-between font-hand text-[10px] sm:text-xs text-[#7A746E] pb-1 border-b border-[#E3DDD1]">
+        <div className="flex items-center justify-between font-hand text-xs text-[#7A746E] pb-1 border-b border-[#E3DDD1]">
           <span className="tracking-wide">
             {pageData.date || pageData.subtitle || `Spread ${spreadNumber}`}
           </span>
           {pageData.weather && (
-            <span className="text-[11px] sm:text-[12px] text-[#8C847B]">
+            <span className="text-xs text-[#8C847B]">
               {pageData.weather}
             </span>
           )}
         </div>
 
-        {/* Page Titles in Patrick Hand / Gaegu */}
+        {/* Page Titles */}
         {pageData.title && (
-          <h2 className="font-hand text-lg sm:text-xl md:text-2xl font-bold text-[#1A1A1A] tracking-normal mt-0.5 mb-0.5 leading-snug">
+          <h2 className="font-hand text-xl font-bold text-[#1A1A1A] tracking-normal mt-1 mb-0.5 leading-tight">
             {pageData.title}
           </h2>
         )}
         {pageData.subtitle && (
-          <p className="font-hand text-xs sm:text-sm text-[#6B655E] mb-0.5">
+          <p className="font-hand text-sm text-[#6B655E] mb-0.5 leading-tight">
             {pageData.subtitle}
           </p>
         )}
       </header>
 
       {/* Page Body Content */}
-      <div className="relative z-10 flex-1 flex flex-col justify-start my-1 space-y-2 sm:space-y-2.5 font-hand text-[13px] sm:text-sm md:text-base leading-relaxed text-[#24211E] overflow-y-auto pr-0.5 scrollbar-none">
+      <div className="relative z-10 flex-1 flex flex-col justify-start my-1 space-y-2.5 font-hand text-sm leading-relaxed text-[#24211E] overflow-y-auto pr-1 pb-6 scrollbar-none">
         {/* Paragraphs */}
         {pageData.paragraphs?.map((para, idx) => (
-          <p key={idx} className="leading-relaxed sm:leading-loose">
+          <p key={idx} className="text-sm leading-relaxed">
             {para}
           </p>
         ))}
 
-        {/* List items (e.g., Spread 4: Things that make you special) */}
+        {/* List items */}
         {pageData.listItems && (
-          <div className="space-y-1.5 sm:space-y-2 my-1 shrink-0">
+          <div className="space-y-2 my-1 shrink-0">
             {pageData.listItems.map((item, idx) => (
-              <div key={idx} className="flex items-start space-x-1.5 sm:space-x-2">
-                <span className="w-3.5 h-3.5 rounded-xs border-2 border-[#1A1A1A] flex items-center justify-center shrink-0 mt-0.5 text-[9px] text-[#1A1A1A] font-bold">
+              <div key={idx} className="flex items-start space-x-2">
+                <span className="w-4 h-4 rounded-xs border-2 border-[#1A1A1A] flex items-center justify-center shrink-0 mt-0.5 text-[10px] text-[#1A1A1A] font-bold">
                   ✓
                 </span>
-                <span className="font-hand text-[13px] sm:text-sm md:text-base text-[#1A1A1A] leading-relaxed">
+                <span className="font-hand text-sm text-[#1A1A1A] leading-relaxed">
                   {item.text}
                 </span>
               </div>
@@ -148,14 +166,14 @@ export const BookPage: React.FC<BookPageProps> = ({
 
         {/* Quote Block / Taped Note */}
         {pageData.quote && (
-          <div className="relative my-1 sm:my-1.5 p-2 sm:p-2.5 bg-[#FFFBF0] border border-[#E8DEC8] shadow-xs rounded-xs shrink-0">
+          <div className="relative my-1.5 p-2.5 bg-[#FFFBF0] border border-[#E8DEC8] shadow-xs rounded-xs shrink-0">
             {/* Washi tape on top */}
             <div className="absolute -top-2 left-6 w-10 h-3 washi-tape-beige border-y border-black/10 rotate-1" />
-            <p className="font-hand text-xs sm:text-sm text-[#332E29] italic leading-snug">
+            <p className="font-hand text-sm text-[#332E29] italic leading-snug">
               &ldquo;{pageData.quote.text}&rdquo;
             </p>
             {pageData.quote.author && (
-              <p className="text-right text-[10px] sm:text-xs text-[#7A7269] mt-0.5">
+              <p className="text-right text-xs text-[#7A7269] mt-0.5">
                 — {pageData.quote.author}
               </p>
             )}
@@ -164,7 +182,7 @@ export const BookPage: React.FC<BookPageProps> = ({
 
         {/* Polaroid Photo with Wooden Clothes Peg */}
         {pageData.image && pageData.image.style !== 'cover-full' && (
-          <div className="my-1 sm:my-1.5 flex flex-col items-center shrink-0">
+          <div className="my-1.5 flex flex-col items-center shrink-0">
             <div
               className={`relative overflow-visible ${
                 pageData.image.style === 'polaroid'
@@ -172,26 +190,26 @@ export const BookPage: React.FC<BookPageProps> = ({
                   : 'bg-white p-1.5 shadow-md border border-[#D9D3C7]'
               }`}
             >
-              {/* Wooden Clothespin Peg clipping the Polaroid photo */}
+              {/* Wooden Clothespin Peg */}
               <div className="absolute -top-4 left-1/2 -translate-x-1/2 w-3.5 h-8 flex flex-col items-center z-30 filter drop-shadow-md">
                 <div className="w-3 h-4 bg-gradient-to-r from-[#E8D4B0] via-[#F5E6CD] to-[#D6BC94] rounded-t-xs border border-[#C5A87B]" />
                 <div className="w-3.5 h-1 bg-gradient-to-r from-[#999] via-[#CCC] to-[#777] my-[-1px] rounded-xs" />
                 <div className="w-3 h-4 bg-gradient-to-r from-[#E0CB9F] via-[#F2E2C4] to-[#C9AE84] rounded-b-xs border border-[#C5A87B]" />
               </div>
 
-              <div className="relative w-32 sm:w-36 md:w-44 h-32 sm:h-36 md:h-44 rounded-xs overflow-hidden">
+              <div className="relative w-28 h-28 rounded-xs overflow-hidden">
                 <Image
                   src={pageData.image.src}
                   alt={pageData.image.alt}
                   fill
-                  sizes="(max-width: 640px) 130px, 180px"
+                  sizes="120px"
                   className="object-cover transition-transform duration-500 hover:scale-105"
                   priority={spreadNumber <= 2}
                 />
               </div>
 
               {pageData.image.caption && (
-                <p className="font-hand text-[11px] sm:text-xs text-center text-[#3D3833] mt-1 px-1 leading-snug max-w-[210px]">
+                <p className="font-hand text-xs text-center text-[#3D3833] mt-1 px-1 leading-snug max-w-[160px]">
                   {pageData.image.caption}
                 </p>
               )}
@@ -209,7 +227,7 @@ export const BookPage: React.FC<BookPageProps> = ({
         {pageData.handwrittenNotes?.map((note, idx) => (
           <div
             key={idx}
-            className="font-hand text-xs sm:text-sm text-[#D9463E] -rotate-1 leading-snug px-1.5 py-0.5 bg-[#FFF2F0] rounded-xs w-fit border border-[#FFD0CA]"
+            className="font-hand text-sm text-[#D9463E] -rotate-1 leading-snug px-2 py-1 bg-[#FFF2F0] rounded-xs w-fit border border-[#FFD0CA]"
           >
             {note}
           </div>
@@ -217,7 +235,7 @@ export const BookPage: React.FC<BookPageProps> = ({
 
         {/* Handwritten Signature */}
         {pageData.signature && (
-          <div className="font-hand text-sm sm:text-base text-[#1A1A1A] text-right mt-1 whitespace-pre-line leading-relaxed">
+          <div className="font-hand text-base text-[#1A1A1A] text-right mt-1 whitespace-pre-line leading-relaxed">
             {pageData.signature}
           </div>
         )}

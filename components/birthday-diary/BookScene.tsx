@@ -611,11 +611,10 @@ export const BookScene: React.FC = () => {
                 <button
                   key={spread.id}
                   onClick={() => goToSpread(idx)}
-                  className={`transition-all duration-300 rounded-full ${
-                    idx === currentSpread
-                      ? 'w-5 h-2 bg-[#1A1A1A]'
-                      : 'w-2 h-2 bg-[#B8B0A2] hover:bg-[#787063]'
-                  }`}
+                  className={`transition-all duration-300 rounded-full ${idx === currentSpread
+                    ? 'w-5 h-2 bg-[#1A1A1A]'
+                    : 'w-2 h-2 bg-[#B8B0A2] hover:bg-[#787063]'
+                    }`}
                   title={`Go to ${spread.chapterLabel || `Spread ${idx + 1}`}`}
                   aria-label={`Go to spread ${idx + 1}`}
                 />
@@ -627,11 +626,10 @@ export const BookScene: React.FC = () => {
           <div className="flex items-center space-x-1 sm:space-x-1.5 shrink-0">
             <button
               onClick={handleToggleMusic}
-              className={`p-1 sm:px-2.5 sm:py-1 rounded-full border text-[11px] sm:text-xs flex items-center space-x-1 transition-all ${
-                isAmbientPlaying
-                  ? 'bg-[#1A1A1A] text-white border-[#1A1A1A]'
-                  : 'bg-white/80 border-[#DDD6C8] text-[#474037] hover:bg-white shadow-2xs'
-              }`}
+              className={`p-1 sm:px-2.5 sm:py-1 rounded-full border text-[11px] sm:text-xs flex items-center space-x-1 transition-all ${isAmbientPlaying
+                ? 'bg-[#1A1A1A] text-white border-[#1A1A1A]'
+                : 'bg-white/80 border-[#DDD6C8] text-[#474037] hover:bg-white shadow-2xs'
+                }`}
               title={isAmbientPlaying ? 'Pause ambient music box' : 'Play ambient music box'}
               aria-label="Toggle ambient music"
             >
@@ -767,9 +765,8 @@ export const BookScene: React.FC = () => {
                     ) : (
                       <div
                         ref={leftBasePageRef}
-                        className={`relative w-1/2 h-full rounded-l-xs overflow-hidden ${
-                          leftStackCount > 0 ? 'book-edge-stack-left' : ''
-                        }`}
+                        className={`relative w-1/2 h-full rounded-l-xs overflow-hidden ${leftStackCount > 0 ? 'book-edge-stack-left' : ''
+                          }`}
                       >
                         <BookPage
                           side="left"
@@ -787,9 +784,8 @@ export const BookScene: React.FC = () => {
                     ) : (
                       <div
                         ref={rightBasePageRef}
-                        className={`relative w-1/2 h-full rounded-r-xs overflow-hidden ${
-                          rightStackCount > 0 ? 'book-edge-stack-right' : ''
-                        }`}
+                        className={`relative w-1/2 h-full rounded-r-xs overflow-hidden ${rightStackCount > 0 ? 'book-edge-stack-right' : ''
+                          }`}
                       >
                         <BookPage
                           side="right"
@@ -809,11 +805,10 @@ export const BookScene: React.FC = () => {
                         style={{ transform: 'rotateY(0deg)' }}
                       >
                         {/* FRONT FACE (Visible 0° -> -90° when swinging right to left) */}
-                        <div className={`absolute inset-0 backface-hidden ${
-                          bookState === 'opening'
-                            ? 'bg-transparent'
-                            : 'rounded-r-xs overflow-hidden shadow-xl bg-[#FAF6EE]'
-                        }`}>
+                        <div className={`absolute inset-0 backface-hidden ${bookState === 'opening'
+                          ? 'bg-transparent'
+                          : 'rounded-r-xs overflow-hidden shadow-xl bg-[#FAF6EE]'
+                          }`}>
                           {bookState === 'opening' ? (
                             <div className="relative w-full h-full bg-transparent filter drop-shadow-[0_20px_35px_rgba(0,0,0,0.2)]">
                               <Image
@@ -853,11 +848,10 @@ export const BookScene: React.FC = () => {
                         )}
 
                         {/* BACK FACE (Visible -90° -> -180° when swung over to the left desk) */}
-                        <div className={`absolute inset-0 backface-hidden rotate-y-180 ${
-                          bookState === 'closing' || bookState === 'closing-back'
-                            ? 'bg-transparent'
-                            : 'rounded-l-xs overflow-hidden shadow-xl bg-[#FAF6EE]'
-                        }`}>
+                        <div className={`absolute inset-0 backface-hidden rotate-y-180 ${bookState === 'closing' || bookState === 'closing-back'
+                          ? 'bg-transparent'
+                          : 'rounded-l-xs overflow-hidden shadow-xl bg-[#FAF6EE]'
+                          }`}>
                           {bookState === 'opening' ? (
                             <BookPage
                               side="left"

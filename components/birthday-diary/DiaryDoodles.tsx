@@ -245,8 +245,8 @@ export const DoodleRenderer: React.FC<DoodleRendererProps> = ({ doodle }) => {
             alt="Diary sticker"
             className="object-contain filter drop-shadow-sm select-none"
             style={{
-              width: doodle.width || 95,
-              height: doodle.height || 95,
+              width: doodle.width ? Math.round(doodle.width * 0.72) : 60,
+              height: doodle.height ? Math.round(doodle.height * 0.72) : 60,
             }}
             draggable={false}
           />
