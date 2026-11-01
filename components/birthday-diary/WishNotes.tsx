@@ -20,10 +20,26 @@ interface WishNotesProps {
 export const WishNotes: React.FC<WishNotesProps> = ({ wishes, rotationDeg = 0 }) => {
   const [selectedWish, setSelectedWish] = useState<WishItem | null>(null);
   const [mounted, setMounted] = useState(false);
+  const [customWish, setCustomWish] = useState<string>('');
 
   useEffect(() => {
     setMounted(true);
+    try {
+      const saved = localStorage.getItem('khushboo_custom_wish');
+      if (saved) setCustomWish(saved);
+    } catch {
+      // localStorage fallback
+    }
   }, []);
+
+  const handleCustomWishChange = (val: string) => {
+    setCustomWish(val);
+    try {
+      localStorage.setItem('khushboo_custom_wish', val);
+    } catch {
+      // fallback
+    }
+  };
 
   const handleOpenNote = (wish: WishItem) => {
     setSelectedWish(wish);
@@ -37,6 +53,8 @@ export const WishNotes: React.FC<WishNotesProps> = ({ wishes, rotationDeg = 0 })
           // slight natural hand-placed rotations
           const rotations = [-1.5, 1.2, -0.8, 2, -1.8, 1.5];
           const rot = rotations[idx % rotations.length];
+          const isWildcard = wish.id === 'w6';
+          const displayMessage = isWildcard && customWish ? `"${customWish}"` : wish.message;
 
           return (
             <button
@@ -56,18 +74,18 @@ export const WishNotes: React.FC<WishNotesProps> = ({ wishes, rotationDeg = 0 })
                   {wish.title}
                 </span>
                 <span className="text-[10px] text-[#8E4A49] font-hand tracking-tighter opacity-70 group-hover:opacity-100">
-                  open note ↗
+                  {isWildcard ? 'write wish ✍️' : 'open note ↗'}
                 </span>
               </div>
               <p className="font-hand text-xs text-[#5C5048] line-clamp-2 mt-1 leading-relaxed">
-                {wish.message}
+                {displayMessage}
               </p>
             </button>
           );
         })}
       </div>
 
-      {/* Note Inspection Overlay (Portalled to document.body to avoid 3D perspective / overflow-hidden clipping) */}
+      {/* Note Inspection Overlay */}
       {mounted && selectedWish && createPortal(
         <div
           onClick={() => setSelectedWish(null)}
@@ -104,9 +122,31 @@ export const WishNotes: React.FC<WishNotesProps> = ({ wishes, rotationDeg = 0 })
               </button>
             </div>
 
-            <p className="font-serif text-base text-[#3C322C] leading-relaxed my-4 whitespace-pre-wrap">
-              {selectedWish.message}
-            </p>
+            {/* Interactive textarea if it's the Wildcard Wish (w6) */}
+            {selectedWish.id === 'w6' ? (
+              <div className="my-3 flex flex-col gap-2.5">
+                <p className="font-hand text-xs text-[#4A3D36] leading-relaxed">
+                  Whatever you want (a treat, a trip, or any ridiculous favor)—type it below, <strong>take a screenshot</strong>, and send it to me to claim it! 🎁
+                </p>
+
+                <textarea
+                  value={customWish}
+                  onChange={(e) => handleCustomWishChange(e.target.value)}
+                  placeholder="Type your wish here... (e.g. You have to take me to...)"
+                  rows={3}
+                  className="w-full p-2.5 rounded-md bg-white/80 border border-black/15 font-hand text-sm text-[#2C231F] placeholder:text-[#8E7E74] focus:outline-none focus:ring-1 focus:ring-[#8E4A49] resize-none leading-relaxed shadow-inner"
+                />
+
+                <div className="bg-[#FFF4E6] border border-[#FAD2A8] rounded-md px-2.5 py-1.5 flex items-center justify-between text-[11px] font-hand text-[#8C5E28]">
+                  <span>📸 Screenshot this & send it to me!</span>
+                  <span>Promised & Guaranteed ✨</span>
+                </div>
+              </div>
+            ) : (
+              <p className="font-serif text-base text-[#3C322C] leading-relaxed my-4 whitespace-pre-wrap">
+                {selectedWish.message}
+              </p>
+            )}
 
             <div className="flex items-center justify-between text-xs text-[#6F6258] pt-2 border-t border-black/10 font-hand">
               <span>Tucked gently inside the diary</span>

@@ -202,15 +202,15 @@ export const DIARY_SPREADS: DiarySpreadData[] = [
       title: "Things That Make You, You",
       subtitle: "Certified 100% genuine & irreplaceable",
       listItems: [
-        { checked: true, text: "Having the most comforting hugs in the entire universe." },
-        { checked: true, text: "Your instinctive urge to take aesthetic photos of the sky when the sunset turns pink." },
-        { checked: true, text: "Listening to the same song on repeat 47 times in a row without getting tired of it." },
-        { checked: true, text: "Your secret superpower: making everyone feel instantly welcome and heard." },
-        { checked: true, text: "Always knowing the right thing to say when someone had a long, exhausting day." },
-        { checked: true, text: "Making the most adorable sound whenever you see a fluffy cat or puppy." },
+        { checked: true, text: "Having the most comforting hugs in the entire universe. 🫂" },
+        { checked: true, text: "Being a legit gifted artist 🎨 (meanwhile my drawing skills are a national emergency)." },
+        { checked: true, text: "Listening to literally every music genre on earth... EXCEPT Haryanvi songs. 🎧🚫" },
+        { checked: true, text: "That signature adorable smile on your face every single time we meet after a while. 😊✨" },
+        { checked: true, text: "Making those legendary egg sandwiches for me 🥪🍳 (officially 5-star Michelin in my book)." },
+        { checked: true, text: "Being there for me when I had no one, and standing like a rock by my side in my lowest phases. ❤️" },
       ],
       handwrittenNotes: [
-        "Checked & verified by yours truly ✔️",
+        "\"100% verified & cherished forever ♡\"",
       ],
       doodles: [
         { type: "heart", position: { bottom: "30px", left: "20px" }, scale: 0.9 },
@@ -219,14 +219,15 @@ export const DIARY_SPREADS: DiarySpreadData[] = [
     },
     rightPage: {
       pageNumber: 8,
-      title: "Margin Doodles & Whispers",
+      title: "A Little Reminder For You",
       paragraphs: [
-        "I was thinking about all the versions of you that exist in people's memories, Khushboo:",
-        "To a stranger on the street, you are the courteous girl who held the door. To a barista, you're the sunny regular with the gentle order.",
-        "To me, you are an anchor, a favourite adventure companion, and the truest kind of friend anyone could ever ask the universe for.",
+        "We spend so much time roasting each other and laughing at dumb things, but I genuinely wanted to say this:",
+        "Thank you for never judging me, for being patient with me, and for always being a safe corner where I can just be myself.",
+        "You carry so much warmth and quiet strength in you, Khushboo. Even when things feel overwhelming, you keep going with that gentle courage that I respect so much.",
+        "I hope today reminds you of how deeply loved, valued, and irreplaceable you are in my life.",
       ],
       handwrittenNotes: [
-        "Thank you for being in my world, Khushboo ♡",
+        "\"Always here for you, no matter what ✨\"",
       ],
       doodles: [
         { type: "flower", position: { top: "30px", left: "25px" }, scale: 0.8 },
@@ -243,15 +244,15 @@ export const DIARY_SPREADS: DiarySpreadData[] = [
     chapterLabel: "V. Under The Stars",
     leftPage: {
       pageNumber: 9,
-      date: "Starlight Whispers",
-      title: "A Night Full of Wishes",
+      date: "Under A Sky Full of Wishes",
+      title: "Take A Breath, You're Doing Great 🌙",
       paragraphs: [
-        "Remember when we looked up at the stars and made ridiculous wishes that seemed too big for our shoes?",
-        "Watching you grow, chase after your dreams, stumble sometimes, pick yourself back up, and keep going with that soft courage of yours—it inspires me constantly.",
-        "Every star in the night sky has its own time to shine. Don't rush yourself. You are right where you need to be.",
+        "You spend so much energy caring for everyone else and trying to do everything right, that sometimes you forget to be kind to yourself.",
+        "So consider this page your official permission to slow down, take a deep breath, and relax your shoulders.",
+        "Life isn't a race. You don't have to prove anything to anyone. The kindness and effort you put into the world will always find its way back to you. I just know this coming year has the sweetest surprises waiting for you.",
       ],
       quote: {
-        text: "The stars don't compete with the moon. They just light up the sky together.",
+        text: "Good things take time. And you are worth all the time in the world. 🤍",
       },
       doodles: [
         { type: "star", position: { top: "20px", left: "20px" }, scale: 0.9 },
@@ -264,11 +265,11 @@ export const DIARY_SPREADS: DiarySpreadData[] = [
       image: {
         src: "/images/illustrations/stargazing.jpg",
         alt: "Chibi friends stargazing under the twinkling galaxy",
-        caption: "Underneath a billion stars, counting blessings and laughing softly.",
+        caption: "May your year be as peaceful as a quiet night sky 🌌",
         style: "diorama",
       },
       handwrittenNotes: [
-        "\"May your wishes travel farther than the furthest comet.\" 🌌",
+        "\"Protect your peace & trust the journey ✨\"",
       ],
       doodles: [
         { type: "airplane", position: { top: "15px", left: "20px" }, scale: 0.8 },
@@ -286,12 +287,12 @@ export const DIARY_SPREADS: DiarySpreadData[] = [
     leftPage: {
       pageNumber: 11,
       date: "A quiet midnight letter",
-      title: "To My Dearest Khushboo",
+      title: "To My Fav Niggie 😂",
       paragraphs: [
         "I hope this year treats your heart with utmost tenderness.",
         "I hope you find mornings where the tea tastes extra warm, afternoons filled with unexpected good news, and nights where you sleep in complete, effortless peace.",
-        "Whenever doubts try to sneak in and whisper that you're not doing enough, I hope you remember this page.",
-        "You are so deeply loved. Not for what you produce or achieve, but simply for the beautiful soul you are when you wake up each day.",
+        "Along with all the good wishes, I also wanted to genuinely apologize. I know I’m not always the easiest person to deal with. Sometimes I do things that annoy you, and sometimes when my head gets overwhelmed, I just shut down, sit quiet, and don't talk to you.",
+        "I know my silence can feel frustrating or distant, but please know it was never because of you. If my quiet phases ever made you feel ignored or hurt, I am truly sorry from the bottom of my heart.",
       ],
       doodles: [
         { type: "ribbon", position: { top: "15px", left: "25px" }, scale: 0.8 },
@@ -301,15 +302,15 @@ export const DIARY_SPREADS: DiarySpreadData[] = [
     },
     rightPage: {
       pageNumber: 12,
-      title: "Forever Cheering For You",
+      title: "Forever Grateful For You",
       paragraphs: [
-        "In this grand, noisy world, real friendships are rare treasures. The kind where silence is comfortable, where distance doesn't dim the bond, and where both of you can be your genuine, uncurated selves.",
-        "I am so endlessly grateful to walk through this chapter of life alongside you.",
-        "Happy birthday, Khushboo. May the chapters ahead be filled with blooming gardens, gentle miracles, and boundless joy.",
+        "Thank you for being so patient with my moods, for understanding my quiet days, and for never giving up on me.",
+        "In this grand, noisy world, real friendships like ours are rare treasures. The kind where we can be our genuine, uncurated, chaotic selves. I'm endlessly grateful to walk through life alongside you.",
+        "May the chapters ahead bring you all the warmth, happiness, and gentle miracles you deserve, Khushboo.",
       ],
       signature: "With all my love & warmest hugs,\nAlways yours ♡",
       handwrittenNotes: [
-        "Keep shining your light. The world is so much softer with you in it.",
+        "\"Promise I'll work on talking more & going quiet less 🥺 ♡\"",
       ],
       doodles: [
         { type: "stamp", position: { bottom: "25px", right: "25px" }, rotation: -6 },
@@ -327,15 +328,15 @@ export const DIARY_SPREADS: DiarySpreadData[] = [
     leftPage: {
       pageNumber: 13,
       date: "Wish Jar Collection",
-      title: "Seven Birthday Wishes for Khushboo",
-      subtitle: "Click each note to read the secret blessing",
+      title: "Birthday Coupons & Treats 🎟️",
+      subtitle: "Click each note to unfold & redeem",
       paragraphs: [
-        "I wrote these down on little slips of pastel parchment so you can unfold them whenever you need a gentle pick-me-up throughout this new year.",
+        "I made these little pastel vouchers just for you. You can cash them in anytime throughout this new year—zero expiry date!",
       ],
       wishes: [
-        { id: "w1", color: "#FDE2E4", title: "Wish for Peace", message: "May your days have calm pauses and your mind remain quiet and serene, Khushboo.", from: "Note #1" },
-        { id: "w2", color: "#E2ECE9", title: "Wish for Adventure", message: "May you discover hidden cute cafes, unexpected friendships, and new favorite streets.", from: "Note #2" },
-        { id: "w3", color: "#FFF1E6", title: "Wish for Laughter", message: "May your belly ache from giggling with people who cherish you.", from: "Note #3" },
+        { id: "w1", color: "#FDE2E4", title: "🍕 Unlimited Pizza Treat", message: "Valid for 1 large pizza of your choice with extra cheese. Redeemable anytime you crave it. My treat, zero questions asked! (Valid 365 days a year).", from: "Coupon #1 • Foodie Pass" },
+        { id: "w2", color: "#E2ECE9", title: "🥟 Emergency Momos Date", message: "Steamed, fried, or kurkure—served with extra spicy red chutney. Valid on days when life gets annoying and you need comfort food immediately.", from: "Coupon #2 • Stress Buster" },
+        { id: "w3", color: "#FFF1E6", title: "🍰 Pastry & Ice Cream Run", message: "Valid for your favorite pastries and as many scoops of ice cream as you want. Perfect for midnight sweet cravings or whenever you need instant happiness!", from: "Coupon #3 • Sweet Tooth Pass" },
       ],
       doodles: [
         { type: "sparkle", position: { top: "15px", right: "20px" } },
@@ -345,14 +346,14 @@ export const DIARY_SPREADS: DiarySpreadData[] = [
     },
     rightPage: {
       pageNumber: 14,
-      title: "More Whispers for Khushboo",
+      title: "More Passes & The Secret Wish ✨",
       wishes: [
-        { id: "w4", color: "#DFE7FD", title: "Wish for Courage", message: "May you say 'yes' to new dreams and trust your intuition boldly.", from: "Note #4" },
-        { id: "w5", color: "#F0E6EF", title: "Wish for Rest", message: "May you allow yourself unhurried weekends, long naps, and cozy books.", from: "Note #5" },
-        { id: "w6", color: "#FFF5EB", title: "Wish for Warmth", message: "May you always find a jacket that fits, tea that comforts, and hands that hold you.", from: "Note #6" },
+        { id: "w4", color: "#DFE7FD", title: "🏆 The 'You Are Right' Pass", message: "Use this during any argument between us to instantly win with no debate. (Use it wisely, you only get one per lifetime! 😂)", from: "Coupon #4 • One-Time Miracle" },
+        { id: "w5", color: "#F0E6EF", title: "🛡️ 24/7 'I Need You' Pass", message: "Valid at 2 PM or 3 AM. If you ever feel lonely, overwhelmed, or just need someone to talk to, call me. I promise I will pick up and be there.", from: "Coupon #5 • Lifetime Validity" },
+        { id: "w6", color: "#FFF9DB", title: "✨ The Wildcard Wish (Blank ✍️)", message: "Click to write your own wish! Type whatever you want, take a screenshot, and send it to me to claim it 🤍", from: "Coupon #6 • Khushboo's Choice" },
       ],
       handwrittenNotes: [
-        "Pick a note whenever you need a reminder of how special you are! 💌",
+        "\"All coupons are 100% non-refundable and strictly binding! 💌\"",
       ],
       doodles: [
         { type: "tape", position: { top: "-10px", left: "45%" }, rotation: 2 },
@@ -370,16 +371,16 @@ export const DIARY_SPREADS: DiarySpreadData[] = [
     leftPage: {
       pageNumber: 15,
       date: "October 2026 • The Grand Finale",
-      title: "Happy Birthday Khushboo!",
-      subtitle: "Blow out the candle & make your wish",
+      title: "Make The Biggest Wish 🎂✨",
+      subtitle: "Close your eyes & blow the candle",
       paragraphs: [
-        "Before we close this little diary, there is one last important ritual.",
-        "Take a moment, close your eyes, think of the one dream that makes your heart beat a little faster...",
-        "And click the candle to blow it out!",
+        "We've reached the very last page of your birthday diary, but before we close it, there is one last important ritual.",
+        "Take a slow breath. Think of the one dream that makes your heart beat a little faster—the wish you want the most this year.",
+        "And click the candle to blow it out! 🕯️💨",
       ],
       interactiveCake: true,
       handwrittenNotes: [
-        "May every single wish you make today find its way true! 🎂✨",
+        "\"May every single wish you make today find its way true! 🎂✨\"",
       ],
       doodles: [
         { type: "sparkle", position: { top: "20px", right: "20px" }, scale: 1.2 },
@@ -389,18 +390,19 @@ export const DIARY_SPREADS: DiarySpreadData[] = [
     },
     rightPage: {
       pageNumber: 16,
-      title: "Until Next Year's Pages",
+      title: "Until Next Year's Pages ♡",
       image: {
         src: "/images/illustrations/cake.jpg",
         alt: "Chibi character celebrating with cake and warm festive glow",
-        caption: "Happy Birthday, Khushboo! May this year be your brightest masterpiece yet.",
+        caption: "May your coming year be as bright and sweet as you are, Khushboo 🌸",
         style: "framed",
       },
       paragraphs: [
-        "Thank you for taking this gentle walk through the diary with me.",
-        "Remember: you can come back and turn these pages whenever you miss this warmth.",
+        "I don't know what the future holds for us, or how much time life gives us to spend together.",
+        "Paths change and life gets busy, but there is one thing that will never change: wherever life takes us, I will always love you, always believe in you, and always be the proudest person cheering for your happiness.",
+        "You can come back and turn these pages whenever you need a reminder of how irreplaceable you are to me.",
       ],
-      signature: "Forever & always,\nHappy Birthday! 🎉",
+      signature: "Forever in your corner,\nHappy Birthday, favorite headache! 🎉❤️",
       doodles: [
         { type: "heart", position: { top: "20px", left: "20px" }, scale: 0.8 },
         { type: "sparkle", position: { bottom: "20px", left: "20px" }, scale: 1.1 },
