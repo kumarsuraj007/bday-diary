@@ -61,19 +61,19 @@ export const DIARY_SPREADS: DiarySpreadData[] = [
       pageNumber: 1,
       date: "Special Edition • 2026",
       weather: "Warm sunbeams & cozy vibes ☀️",
-      title: "Dear Khushboo,",
-      subtitle: "Happy Birthday to my favorite human!",
+      title: "Dear Shithead,",
+      subtitle: "Happy Birthday to my absolute favorite headache!",
       paragraphs: [
-        "Welcome to your very own personal birthday diary.",
-        "A quiet space to step into whenever the world gets too noisy. Somewhere to keep safe all our shared laughter, silly inside jokes, late-night talks, little victories, and sweet moments that make you so irreplaceable.",
-        "Take a slow breath. Turn the pages whenever you're ready.",
+        "Welcome to your very own personal birthday diary — yes, I actually spent real time making this instead of sleeping, so you better appreciate it.",
+        "Consider this a cozy escape whenever the world gets a little too loud, or whenever you need a reminder of how special you really are. Somewhere to keep safe all our unhinged laughter, silly inside jokes, and all the sweet moments that make you completely irreplaceable to me.",
+        "Take a slow breath, grab a snack, and turn the pages whenever you're ready.",
       ],
       quote: {
-        text: "Good Things Take Time ☺ ♡",
-        author: "a gentle reminder",
+        text: "You're stuck with me forever. No refunds.",
+        author: "your 24/7 personal therapist",
       },
       handwrittenNotes: [
-        "\"More smiles, more dreams, more you ♡\"",
+        "\"Another year older and still running on 2% braincell ♡\"",
       ],
       doodles: [
         { type: "peg", position: { top: "10px", right: "20px" }, scale: 0.9 },
@@ -83,15 +83,19 @@ export const DIARY_SPREADS: DiarySpreadData[] = [
     },
     rightPage: {
       pageNumber: 2,
-      title: "For the gentlest soul",
+      title: "To the one who deserves the world,",
       image: {
         src: "/images/illustrations/flowers.jpg",
         alt: "Chibi character holding a delicate bouquet of roses and chamomile",
-        caption: "May your coming year be as gentle and blooming as wild chamomile, Khushboo.",
+        caption: "Blooming into your best era yet 🌸",
         style: "framed",
       },
       paragraphs: [
-        "Here's to celebrating who you are today, and every small spark you bring into this life without even realizing it.",
+        "If there's anyone who deserves all the happiness, success, and good things life has to offer, it's you.",
+        "Thank you for being my constant, for listening to me, and for always being someone I can count on. May this year bring you closer to everything your heart quietly wishes for.",
+      ],
+      handwrittenNotes: [
+        "\"Always cheering for you 🌟\"",
       ],
       doodles: [
         { type: "butterfly-clip", position: { top: "15px", right: "20px" }, rotation: 12 },
@@ -108,16 +112,16 @@ export const DIARY_SPREADS: DiarySpreadData[] = [
     chapterLabel: "II. Turning Pages",
     leftPage: {
       pageNumber: 3,
-      date: "Page 03 • Reflections",
-      title: "Another Orbit Around the Sun",
+      date: "Page 03 • Life Updates",
+      title: "Leveling Up (Still No Manual)",
       paragraphs: [
-        "Time moves in such strange ways. One day we are counting down the days until summer, and the next, autumn leaves are twirling on the sidewalks.",
-        "Through every season, you carry this soft, steady warmth with you, Khushboo. The way you genuinely listen when people speak, the way your laugh rings across the room, the kindness you quietly give without ever asking for applause.",
-        "This little book is simply a mirror to remind you of that magic.",
+        "Another year, another level unlocked, and we still have absolutely no idea what we're doing.",
+        "They say time flies when you're having fun, but with you, time just moves in fast-forward because half our time is spent laughing at things that aren't even funny to normal people.",
+        "Thank you for sticking around, for being my safe space, and for never judging my terrible jokes. The world is just a much cooler place with you in it.",
       ],
       quote: {
-        text: "Some people are like soft lamplight on a rainy evening—they make the whole room feel like home.",
-        author: "from the diary",
+        text: "Growing old is mandatory. Growing up is strictly optional.",
+        author: "the truth",
       },
       doodles: [
         { type: "code-tape", position: { bottom: "12px", left: "15px" }, rotation: -1 },
@@ -128,14 +132,15 @@ export const DIARY_SPREADS: DiarySpreadData[] = [
     rightPage: {
       pageNumber: 4,
       title: "Things I Love About You",
-      subtitle: "A quick list from the heart",
+      subtitle: "A totally unbiased & verified list",
       paragraphs: [
-        "Your contagious excitement over small stationery, bookstore smells, and that one very specific cafe playlist.",
-        "How you remember the smallest details someone mentioned three months ago.",
-        "The gentle patience you give to everyone around you (now remember to give some of that patience to yourself too!).",
+        "1. Your unhinged humor — That ridiculous \"butttalk\" joke of yours that still lives completely rent-free in my head. Only you could say something that silly and make it that funny.",
+        "2. The age irony — How you're literally younger than me, yet somehow end up being the mature, sensible adult between us 90% of the time. (I don't admit this often, so don't let it get to your head).",
+        "3. That handmade card — The effort, time, and love you put into making that handmade card for my birthday meant the absolute world to me. In a world full of quick 2-second texts, something made with real heart is so rare. I'll always cherish it.",
+        "4. Just how pyaari & brilliant you are — How insanely smart and sharp you are, even when you're acting like a complete goofball. At the end of the day, you're just so effortlessly pyaari, and having you in my life is a blessing.",
       ],
       handwrittenNotes: [
-        "Never lose that spark in your eyes, Khushboo! ✨",
+        "\"Don't let all these compliments go to your head 😤 ♡\"",
       ],
       doodles: [
         { type: "stamp", position: { top: "18px", right: "20px" }, rotation: 8 },
@@ -151,32 +156,32 @@ export const DIARY_SPREADS: DiarySpreadData[] = [
     chapterLabel: "III. Snapshots",
     leftPage: {
       pageNumber: 5,
-      date: "Spring Memories • April 14",
-      weather: "Cherry blossoms & warm milk tea 🌸",
-      title: "The Sakura Afternoon",
+      date: "Core Memory • That One Outing 🌲",
+      weather: "Awkward silence & flying tree glue 💀",
+      title: "The Cheel Ke Ped Incident 🌲💀",
       paragraphs: [
-        "Do you remember that afternoon when we lost track of time sitting by the park bench?",
-        "We said we would only stay for twenty minutes, but we ended up sharing three cups of boba, talking about childhood dreams, favourite songs, and laughing until our stomachs hurt.",
-        "The petals were falling like pink snow, and you said: 'I wish we could pause this exact second and tuck it into a pocket.'",
-        "Well Khushboo, here it is—safely tucked right into page five.",
+        "Do you remember that day we went out and there was that weird, intense gap between us? We weren't even talking properly, like two awkward strangers who forgot how to communicate. 😶‍🌫️🤐",
+        "And then out of nowhere... your chaotic brain decided to play with that sticky glue from the cheel ka ped (pine tree resin). You tried to fling it to the other side. 🌲🎯",
+        "Except your aim was absolutely legendary... and that sticky tree resin flew directly into my head, cementing the tips of my hair into a solid rock! 😭💀 And the worst part? You were dying of laughter while I was standing there traumatized!",
+        "All that awkward tension vanished real quick. When we reached home, you sweetly rushed to your house to get me oil to rinse it off... only to find out I had already used conditioner and saved my own hair. 😂🧴 Leave it to you to break the ice by literally gluing my hair. ❤️",
       ],
       doodles: [
         { type: "tape", position: { top: "-12px", right: "30%" }, rotation: 3 },
         { type: "flower", position: { bottom: "25px", left: "30px" }, scale: 0.8 },
         { type: "sticker", stickerSrc: "/stickers/white-fluffy-cat-face.png", position: { bottom: "12px", right: "14px" }, width: 80, height: 80, rotation: 4 },
       ],
-      stampText: "CHERISHED MEMORY",
+      stampText: "CORE MEMORY",
     },
     rightPage: {
       pageNumber: 6,
       image: {
         src: "/images/illustrations/polaroid.jpg",
         alt: "Polaroid snapshot of cute chibi friends sharing boba on a park bench",
-        caption: "Spring Memories • Our eternal bench under the cherry trees",
+        caption: "The exact day tree glue broke the awkward silence 🌲😭",
         style: "polaroid",
       },
       handwrittenNotes: [
-        "\"Some moments never fade, they just turn into gold.\" 📸",
+        "\"Conditioner saved the day, but thanks for the oil 🧴♡\"",
       ],
       doodles: [
         { type: "peg", position: { top: "-10px", left: "45%" } },
