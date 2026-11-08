@@ -175,9 +175,9 @@ export const DIARY_SPREADS: DiarySpreadData[] = [
     rightPage: {
       pageNumber: 6,
       image: {
-        src: "/images/illustrations/polaroid.jpg",
-        alt: "Polaroid snapshot of cute chibi friends sharing boba on a park bench",
-        caption: "The exact day tree glue broke the awkward silence 🌲😭",
+        src: "/images/illustrations/oil-and-conditioner.jpg",
+        alt: "Cute chibi illustration of sweet hair oil and conditioner bottles hugging each other",
+        caption: "The dynamic duo: Oil & Conditioner to the rescue! 🧴✨",
         style: "polaroid",
       },
       handwrittenNotes: [
@@ -289,7 +289,7 @@ export const DIARY_SPREADS: DiarySpreadData[] = [
       date: "A quiet midnight letter",
       title: "To My Fav Niggie 😂",
       paragraphs: [
-        "I hope this year treats your heart with utmost tenderness.",
+        "I hope next year treats your heart with utmost tenderness.",
         "I hope you find mornings where the tea tastes extra warm, afternoons filled with unexpected good news, and nights where you sleep in complete, effortless peace.",
         "Along with all the good wishes, I also wanted to genuinely apologize. I know I’m not always the easiest person to deal with. Sometimes I do things that annoy you, and sometimes when my head gets overwhelmed, I just shut down, sit quiet, and don't talk to you.",
         "I know my silence can feel frustrating or distant, but please know it was never because of you. If my quiet phases ever made you feel ignored or hurt, I am truly sorry from the bottom of my heart.",
@@ -391,15 +391,9 @@ export const DIARY_SPREADS: DiarySpreadData[] = [
     rightPage: {
       pageNumber: 16,
       title: "Until Next Year's Pages ♡",
-      image: {
-        src: "/images/illustrations/cake.jpg",
-        alt: "Chibi character celebrating with cake and warm festive glow",
-        caption: "May your coming year be as bright and sweet as you are, Khushboo 🌸",
-        style: "framed",
-      },
       paragraphs: [
         "I don't know what the future holds for us, or how much time life gives us to spend together.",
-        "Paths change and life gets busy, but there is one thing that will never change: wherever life takes us, I will always love you, always believe in you, and always be the proudest person cheering for your happiness.",
+        "I won’t lie, these past two weeks have been really heavy. We got distant, set boundaries, and it honestly hurts. But more than anything, I'm truly sorry for everything on my end. I really hope with time things get better and we can find our way back to how we used to be—meeting up, hanging out, and laughing together without any tension or worries. Wherever life takes us, I’ll always be rooting for your happiness.",
         "You can come back and turn these pages whenever you need a reminder of how irreplaceable you are to me.",
       ],
       signature: "Forever in your corner,\nHappy Birthday, favorite headache! 🎉❤️",
