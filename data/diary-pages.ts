@@ -349,7 +349,7 @@ export const DIARY_SPREADS: DiarySpreadData[] = [
       title: "More Passes & The Secret Wish ✨",
       wishes: [
         { id: "w4", color: "#DFE7FD", title: "🏆 The 'You Are Right' Pass", message: "Use this during any argument between us to instantly win with no debate. (Use it wisely, you only get one per lifetime! 😂)", from: "Coupon #4 • One-Time Miracle" },
-        { id: "w5", color: "#F0E6EF", title: "🛡️ 24/7 'I Need You' Pass", message: "Valid at 2 PM or 3 AM. If you ever feel lonely, overwhelmed, or just need someone to talk to, call me. I promise I will pick up and be there.", from: "Coupon #5 • Lifetime Validity" },
+        { id: "w5", color: "#F0E6EF", title: "🛡️ 24/7 'I Need You' Pass", message: "Valid at 2 PM or 3 AM. If you ever feel lonely, overwhelmed, or just need someone to talk to, call me.", from: "Coupon #5 • Lifetime Validity" },
         { id: "w6", color: "#FFF9DB", title: "✨ The Wildcard Wish (Blank ✍️)", message: "Click to write your own wish! Type whatever you want, take a screenshot, and send it to me to claim it 🤍", from: "Coupon #6 • Khushboo's Choice" },
       ],
       handwrittenNotes: [
@@ -392,8 +392,8 @@ export const DIARY_SPREADS: DiarySpreadData[] = [
       pageNumber: 16,
       title: "Until Next Year's Pages ♡",
       paragraphs: [
-        "I don't know what the future holds for us, or how much time life gives us to spend together.",
-        "I won’t lie, these past two weeks have been really heavy. We got distant, set boundaries, and it honestly hurts. But more than anything, I'm truly sorry for everything on my end. I really hope with time things get better and we can find our way back to how we used to be—meeting up, hanging out, and laughing together without any tension or worries. Wherever life takes us, I’ll always be rooting for your happiness.",
+        "I don't know what the future holds for us, or how much time life gives us to spend together, but I am so grateful to have you in my life.",
+        "I won’t lie, these past two weeks have been really heavy. We got distant, set boundaries, and it honestly hurts. But more than anything, I'm truly sorry for everything. I really hope with time things get better and we can find our way back to how we used to be—meeting up, hanging out, and laughing together without any tension or worries. Wherever life takes us, I’ll always be rooting for your happiness.",
         "You can come back and turn these pages whenever you need a reminder of how irreplaceable you are to me.",
       ],
       signature: "Forever in your corner,\nHappy Birthday, favorite headache! 🎉❤️",
